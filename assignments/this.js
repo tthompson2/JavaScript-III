@@ -4,7 +4,7 @@
 * 1. Binding done to the Javascript default window, and all of the different functions that are assoicated with the default window
 * 2. The keyword this is tied to the object that invokes it on the left hand side of the dot accessor.
 * 3. It is like using a cookie cutter to make new cookies molds. The cutter will only make new cookie shapes from the same dough, and with other defined properties 
-* 4. These are bindings you where are intentional with the object that you're passing into another function
+* 4. These are bindings that use the call or apply method.
 *
 * write out a code example of each explanation above
 */
@@ -33,11 +33,11 @@ const obj = {
     name: 'Trevor',
     height: 5.9,
     outputValues: function() {
-      console.log(this.name + 'is '+ this.height);
+      console.log(this.name + ' is '+ this.height);
     }
 };
 
-obj.prototype.outputValues();
+obj.outputValues();
 
 // Principle 3
 
@@ -53,8 +53,8 @@ function house(count, size) {
    }
 };
 
-
 lovelyAbode = new house(10, 1500000);
+lovelyAbode.OpenDoor();
 
 // Principle 4
 
