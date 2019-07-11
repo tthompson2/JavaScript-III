@@ -53,9 +53,18 @@ function house(count, size) {
    }
 };
 
-lovelyAbode = new house(10, 1500000);
+const lovelyAbode = new house(10, 1500000);
 lovelyAbode.OpenDoor();
+
+const uglyAbode = new house(1, 2000);
+uglyAbode.OpenDoor();
 
 // Principle 4
 
 // code example for Explicit Binding
+
+//lovelyAbode.OpenDoor.call();
+//lovelyAbode.OpenDoor.apply();
+
+lovelyAbode.OpenDoor.call(uglyAbode);
+lovelyAbode.OpenDoor.apply(uglyAbode, []);
