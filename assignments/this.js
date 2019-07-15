@@ -12,17 +12,9 @@
 // Principle 1
 
 // code example for Window Binding
-function checkWindow (test)
-{
+console.log(this);
 
-    // The this call for this function gets the window because it isn't being called within a object,
-    // since it isn't being called in a object it will reach for the global scope when this is invoked, because the javascript
-    // language inherits properties from a global object like Java does...
-    console.log(this);
-    return test;
-}
-
-checkWindow ('test');
+//checkWindow ('test');
 
 // Principle 2
 
